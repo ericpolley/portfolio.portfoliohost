@@ -8,8 +8,6 @@ body {
     color: rgb(211, 145, 24);
     margin: 0;
 
-
-
 }
 
 .hidden {
@@ -17,7 +15,7 @@ body {
 }
 
 
-a, span {
+a, #navContact {
     color: rgb(255, 190, 70);
     font-size: 250%;
     text-decoration: none;
@@ -76,19 +74,16 @@ a, span {
     height: 100%;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .proj1 {
     display: flex ;
     justify-content: center;
     align-items: center;
-    background-image: url('images/man01.jpg');
+    background-image: url('images/projMFC.png');
     background-blend-mode: overlay;
     background-color: rgba(220, 220, 220, 0.05);
-    background-size: cover;
-    background-position: center;
-    width: 20vw;
-    max-width: 300px;
-    height: 22vh;
+    
 }
 .proj2 {
     display: flex ;
@@ -97,11 +92,6 @@ a, span {
     background-image: url('images/man02.jpg');
     background-blend-mode: overlay;
     background-color: rgba(220, 220, 220, 0.05);
-    background-size: cover;
-    background-position: center;
-    width: 20vw;
-    max-width: 300px;
-    height: 22vh;
 }
 
 .proj3 {
@@ -112,24 +102,17 @@ a, span {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 20vw;
-    max-width: 300px;
     background-blend-mode: overlay;
     background-color: rgba(220, 220, 220, 0.05);
-    height: 22vh;
 }
 
 
 .code {
     background-image: url('images/githubLink.png');
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 20vw;
-    max-width: 300px;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.3);
-    height: 22vh;
+    
 }
 
 #cartoonPortfolio {
@@ -213,14 +196,14 @@ a, span {
     background-color: rgba(17, 17, 17, 0.7);
     border: 5px solid rgb(34, 34, 34);
     color: rgb(255, 190, 70);
+    animation: startButton 3s infinite alternate linear;
 }
 
 #startButton:hover {
     height: 51vh;
     width: 61vw;
-    
-    
     border: 5px solid black;
+    animation-play-state: paused;
 }
 
 #startButton:active {
@@ -261,7 +244,14 @@ a, span {
    }
 
 .border {
-    border-radius: 50%;
+
+    border-radius: 20%;
+    width: 40vw;
+    min-width: 200px;
+    max-width: 400px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
 }
 
    .hoverProj:hover {
@@ -271,6 +261,13 @@ a, span {
 @keyframes hoverproject {
     0% { transform: scale(100%)}
     100% {transform: scale(103%);}
+}
+
+@keyframes startButton {
+    0% { transform: scale(100%)}
+    80% { transform: scale(100%)}
+    90% {transform: scale(102%);}
+    100% { transform: scale(99%)}
 }
 
 #navBar {
